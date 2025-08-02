@@ -1,0 +1,114 @@
+/* global.css */
+
+:root {
+  --bg-color: #1a0731;
+  --card-bg: #2d0c49;
+  --primary-color: #9d4edd;
+  --primary-light: #c77dff;
+  --text-color: #ffffff;
+  --text-muted: #cfcfcf;
+  --error-color: #ff4d6d;
+  --border-radius: 12px;
+  --transition: 0.3s ease-in-out;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+  transition: color var(--transition);
+}
+
+a:hover {
+  color: var(--primary-light);
+}
+
+.btn-primary {
+  display: inline-block;
+  background: var(--primary-color);
+  color: #fff;
+  padding: 0.6rem 1.2rem;
+  border-radius: var(--border-radius);
+  font-weight: bold;
+  transition: background var(--transition);
+}
+
+.btn-primary:hover {
+  background: var(--primary-light);
+}
+
+.loading {
+  text-align: center;
+  padding: 2rem;
+  font-size: 1.2rem;
+}
+
+.error-text {
+  color: var(--error-color);
+  margin: 1rem 0;
+  text-align: center;
+}
+
+.empty-state {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+/* Homepage.module.css */
+
+.page-container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.page-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--primary-light);
+}
+
+.formulas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .page-title {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .page-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .formulas-grid {
+    grid-template-columns: 1fr;
+  }
+}

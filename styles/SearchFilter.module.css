@@ -1,0 +1,98 @@
+/* SearchFilter.module.css */
+
+.filterContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  background-color: #2d0c49;
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  height: 100px;
+}
+
+.searchBox {
+  position: relative;
+  flex: 1;
+  min-width: 250px;
+}
+
+.searchInput {
+  height: 60px;
+  width: 100%;
+  padding: 0.6rem 2.5rem 0.6rem 1rem;
+  border-radius: 8px;
+  border: none;
+  background-color: #3e1a5d;
+  color: white;
+  font-size: 1.05rem;
+  transition: background 0.3s ease;
+}
+
+.searchInput::placeholder {
+  color: #cfcfcf;
+}
+
+.searchInput:focus {
+  outline: 2px solid #9d4edd;
+  background-color: #4d2674;
+}
+
+.searchIcon {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #cfcfcf;
+  font-size: 1.1rem;
+}
+
+.categoryFilter {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.filterLabel {
+  font-weight: 600;
+  color: #cfcfcf;
+}
+
+.categorySelect {
+  background-color: #3e1a5d;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-size: 1.25rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  height: 60px;
+}
+
+.categorySelect:hover {
+  background-color: #4d2674;
+}
+
+.categorySelect:focus {
+  outline: 2px solid #9d4edd;
+}
+
+/* Responsive layout for small screens */
+@media (max-width: 600px) {
+  .filterContainer {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .categoryFilter {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .categorySelect {
+    flex: 1;
+  }
+}

@@ -1,0 +1,141 @@
+/* styles/FormulaCard.module.css */
+
+.formula-card-container {
+  padding: 1rem;
+}
+
+.formula-card {
+  background-color: #2d0c49;
+  border-radius: 16px;
+  padding: 1.5rem;
+  color: #fff;
+  width: 320px;
+  height: 380px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.formula-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 24px rgba(157, 78, 221, 0.4);
+}
+
+.formula-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.formula-title {
+  font-size: 1.4rem;
+  color: #c77dff;
+  font-weight: bold;
+}
+
+.formula-category {
+  background-color: #6a0dad;
+  color: #fff;
+  font-size: 0.85rem;
+  padding: 0.3rem 0.6rem;
+  border-radius: 8px;
+  margin-top: 0.5rem;
+}
+
+.formula-display {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  overflow-x: auto;
+}
+
+.formula-description {
+  font-size: 0.95rem;
+  color: #d3d3d3;
+  margin-bottom: 1rem;
+}
+
+.formula-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.formula-date {
+  font-size: 0.8rem;
+  color: #b0a5c5;
+}
+
+.formula-actions {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.view-btn,
+.edit-btn,
+.delete-btn {
+  padding: 0.4rem 0.8rem;
+  font-size: 0.85rem;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.view-btn {
+  background-color: #4b0082;
+  color: white;
+}
+
+.view-btn:hover {
+  background-color: #6c1aa6;
+}
+
+.edit-btn {
+  background-color: #9d4edd;
+  color: white;
+}
+
+.edit-btn:hover {
+  background-color: #c77dff;
+}
+
+.delete-btn {
+  background-color: #ff4d6d;
+  color: white;
+  border: none;
+}
+
+.delete-btn:hover {
+  background-color: #e63950;
+}
+
+/* Responsive Styling */
+@media (max-width: 600px) {
+  .formula-card-footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .formula-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .view-btn,
+  .edit-btn,
+  .delete-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
