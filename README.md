@@ -7,6 +7,10 @@
 
 ---
 
+# Output Screenshot
+
+![Output](./public/output.png)
+
 ## ✨ Features
 
 ✅ Built with **Next.js (App Router)** ⚡
